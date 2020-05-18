@@ -1,0 +1,445 @@
+<!--===========  C1961593	CMT218 Data Visualisation  ================-->
+<!--==========================  HEATMAP	=============================-->
+
+
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<!-- The div where the viz will go -->
+<div id="viz">
+</div>
+<div id="#buttons"> <input type="button" id="all" value="all" />
+  <input type="button" id="female" value="female" />
+  <input type="button" id="male" value="male" />
+</div>
+
+<style>
+  body {
+    width: 960px;
+    height: 500px;
+    position: relative;
+    background: #f2f2f2;
+    font-family: "Verdana", sans-serif;
+  }
+
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 14em;
+    height: 4em;
+    font: 1.5em sans-serif;
+    color: white;
+  }
+
+  div.explanation {
+    position: absolute;
+    text-align: left;
+    width: 30em;
+    height: 15em;
+    font: 1.5em sans-serif;
+    color: white;
+  }
+
+  input {
+    margin-left: 10px;
+    margin-top: 0px;
+    float: left;
+    background-color: rgb(87, 141, 141);
+    border: none;
+    color: white;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Garamond";
+  }
+
+  #all {
+    margin-left: 370px;
+  }
+</style>
+
+<script>
+
+
+  //========================== CREATE THE SVG  ====================================
+  // set the dimensions and margins of the graph
+  var margin = { top: 280, right: 210, bottom: 300, left: 370 },// top: 100, right: 60, bottom: 120, left: 140 
+    width = 1500 - margin.left - margin.right
+    height = 1500 - margin.top - margin.bottom
+  ;
+
+  //==================== BUILD AXES, LABELS and TITLES  =============================
+  //store path to datasets in variable
+  var BOTH = "comorb_both.csv";
+  var FEM = "comorb_fem.csv";
+  var MAL = "comorb_mal.csv";
+
+  //load the datasets the first time the page is loaded
+  d3.select(this).on("load", function () { update(BOTH) });
+  //load dataset according to button clicked
+  d3.select("#all").on("click", function () { update(BOTH); });
+  d3.select("#female").on("click", function () { update(FEM); });
+  d3.select("#male").on("click", function () { update(MAL); });
+
+
+  function update(dataset) {
+    d3.select("svg").remove();
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#viz")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+      ;
+    ;
+    //Read the data and make it available with a function
+    d3.csv(dataset).then(function (data) {
+      
+      // Labels of row and columns
+
+      var xDisorders = ["Panic Disorder", "Agoraphobia", "Social Anxiety D.", "Specific Phobia", "Generalised Anxiety D.", "Obsessive-Compulsive-D.", "Post Traumatic Stress D.", "Major Depressive Episode", "Anorexia Nervosa", "Bulimia Nervosa", "Binge Eating D.", "Cannabis Dep.", "Stimulants Dep.", "Opioids Dep.", "Sedatives Dep.", "Alcohol Dependence", "Somatisation D.", "Body Dysmorphic D.", "Pathological Gambling", "Insomnia", "Hypersomnia"];
+      var yDisorders = ["Panic Disorder", "Agoraphobia", "Social Anxiety D.", "Specific Phobia", "Generalised Anxiety D.", "Obsessive-Compulsive-D.", "Post Traumatic Stress D.", "Major Depressive Episode", "Anorexia Nervosa", "Bulimia Nervosa", "Binge Eating D.", "Cannabis Dep.", "Stimulants Dep.", "Opioids Dep.", "Sedatives Dep.", "Alcohol Dependence", "Somatisation D.", "Body Dysmorphic D.", "Pathological Gambling", "Insomnia", "Hypersomnia"];
+
+      // x axis and tick labels
+      var x = d3.scaleBand()
+        .range([0, width])
+        .domain(xDisorders)
+        .padding(0.01)
+      ;
+
+      svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x)) //xAxis
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .style("font-size", "1.7em")
+        .style("font-family", "Verdana,sans-serif")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)")
+      ;
+
+      //x axis label
+      svg.append("text")
+        .attr("transform", "translate(" + (width / 2) + " ," + (height + 250) + ")")
+        .style("text-anchor", "middle")
+        .style("font-size", "1.7em")
+        .text("Primary disorder")
+      ;
+
+      // y axis and tick labels
+      var y = d3.scaleBand()
+        .range([height, 0])
+        .domain(yDisorders)
+        .padding(0.01)
+      ;
+
+      svg.append("g")
+        .call(d3.axisLeft(y))
+        .style("font-size", "1em")
+        .style("font-family", "Verdana, sans-serif")
+      ;
+
+      // Y axis label
+      svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 100 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .style("text-anchor", "middle")
+        .style("font-size", "1.7em")
+        .text("Secondary disorder")
+      ;
+
+      // Title
+      svg.append("text")
+        .attr("x", 0)
+        .attr("y", -130)
+        .style("font-size", "3em")
+        .style("font-weight", "bold")
+        .style("font-family", "sans-serif")
+        .text("Comorbidity In Mental Disorders")
+      ;
+
+      // Subtitle
+      svg.append("text")
+        .attr("x", 0)
+        .attr("y", -95)
+        .style("fill", "grey")
+        .style("font-size", "1.7em")
+        .style("font-family", "sans-serif")
+        .text("Depression, insomnia & anxiety disorders are the most common secondary disorders.")
+      ;
+
+      //append the links to the data source above the heatmap
+      svg.append("text")
+        .attr("x", 0)
+        .attr("y", -15)
+        .style("fill", "grey")
+        .style("font-size", "1em")
+        .text("View the ")
+      ;
+
+      svg.append("text")
+        .attr("x", 75)
+        .attr("y", -15)
+        .style("font-size", "1em")
+        .text("data source")
+        .style("fill", "rgb(123,174,174")
+        .style("cursor", "pointer")
+        .style("text-decoration", "underline")
+        .on("click", function () { window.open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4392551/"); })
+      ;
+
+      svg.append("text")
+        .attr("x", 175)
+        .attr("y", -15)
+        .style("fill", "grey")
+        .style("font-size", "1em")
+        .text("or download the ")
+      ;
+
+      svg.append("text")
+        .attr("x", 310)
+        .attr("y", -15)
+        .style("font-size", "1em")
+        .text("dataset")
+        .style("fill", "rgb(123,174,174")
+        .style("cursor", "pointer")
+        .style("text-decoration", "underline")
+        .on("click", function () { window.open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4392551/bin/jmir_v17i3e55_app2.xlsx"); })
+      ;
+
+
+
+      //============================ BUILD TOOLTIP  ===================================
+
+      // Build colour scale
+
+        // colour range that will correspond to the data
+        // based on rgb(87, 141, 141) -> https://www.mentalhealth.org.uk/our-work
+      var colours = ["#ffffff", "#eff5f5", "#dfecec", "#d0e2e2", "#c0d8d8", "#b0cfcf", "#a0c5c5", "#90bbbb", "#81b1b1", "#71a8a8"];
+
+      var myColour = d3.scaleLinear()
+        .domain([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+        .range(colours)
+      ;
+
+      // create the tooltip
+      var tooltip = d3.select("#viz")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "grey")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "10px")
+        .style("padding", "0.7em")
+      ;
+
+      // Changing tooltip on hover/move and leave  
+      var mouseover = function (d) {
+        tooltip.style("opacity", 1)
+        tooltip_text = "<strong>" + d.groups + "</strong>" + " & " + "<strong>" + d.variables + "</strong>" + "<br>" + "<span style= line-height:2>" + d.values + "% Comorbidity" + "</span>";
+
+      }
+
+      //create flag variables for when the user clicks a rectangle to mark
+      var clicked = false;
+      var marker = false;
+
+      var mousemove = function (d) {
+        tooltip
+          .html(tooltip_text)
+            //position tooltip
+          .style("left", (d3.mouse(this)[0]) + 430 + "px")
+          .style("top", (d3.mouse(this)[1]) + 110 + "px")
+        d3.select(this)
+          .style("stroke", function (d) {
+              //make stroke purple if status is "clicked"
+            if (clicked) { return "#990099" }
+              //prevent clearing previously drawn purple border on mousemove
+            else if (!clicked & this.style.stroke == "rgb(153, 0, 153)") { return "#990099" }
+              //make stroke black if status is "not clicked"
+            else if (!clicked) { return "black" }
+          }
+          )
+          .style("opacity", 1)
+          .style("stroke-width", ".16em")
+      }
+
+      var mouseleave = function (d) {
+        tooltip.style("opacity", 0)
+        d3.select(this)
+          .style("opacity", 1)
+          .style("stroke", function (d) {
+            if (clicked) {
+              clicked = false;
+              return "#990099";
+            }
+            else if (!clicked & this.style.stroke == "rgb(153, 0, 153)") { return "#990099" }
+            else if (!clicked) { return "#e6e6e6"; }
+          }
+          )
+      }
+
+      var click = function (d) {
+        d3.select(this)
+          .style("stroke", function (d) {
+            if (this.style.stroke == "black") { clicked = true; return "#990099" }
+            else { return "#e6e6e6" }
+          })
+          .style("stroke-width", ".16em")
+      }
+
+
+
+      //=================== BUILD RECTANGLES ======================================
+
+      //create rectangles and colour them accordingly
+      var rect = svg.selectAll()
+        .data(data, function (d) { return d.groups + ':' + d.variables; })
+        .enter()
+        .append("rect")
+        .attr("x", function (d) { return x(d.groups) })
+        .attr("y", function (d) { return y(d.variables) })
+        .attr("width", x.bandwidth())
+        .attr("height", y.bandwidth())
+        .style("fill", function (d) {
+          if (d.groups == d.variables) { return "#b3b3b3" }
+          else if (d.groups != d.variables) { return myColour(d.values) }
+        })
+        .style("stroke", "#e6e6e6")
+        .on("mouseover", mouseover)
+        .on("click", click)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+      ;
+
+      //=============================== BUILD LEGEND  =================================
+
+      //Building colour scale
+      colourScale = d3.scaleOrdinal()
+        .domain([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
+        .range(colours)
+      ;
+
+      //simplify calculation by defining the desired overall width of the colour scale
+      var scaleWidth = 600;
+
+      legends = svg.append("svg")
+        .attr("class", "legends")
+        //.attr("transform", "translate(" + ((width + margin.right) / 1.8 - scaleWidth / 2.3 - margin.left / 2) + "," + (height + margin.bottom - 55) + ")");
+        .attr("transform", "translate(" + ((margin.left + width) + ",0)"))
+      ;
+
+      var rev = colours.reverse();
+
+      revScale = d3.scaleOrdinal()
+        .domain([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5])
+        .range(rev)
+      ;
+
+
+      legends.append("g")
+        .attr("class", "LegRect")
+        .attr("transform", "translate(" + width * 1.1 + ",150)")
+        .selectAll("rect")
+        .data(revScale.range())
+        .enter()
+        .append("rect")
+        .attr("height", scaleWidth / colourScale.range().length + "px")
+        .attr("width", "1.5em")
+        .attr("fill", function (d) { return d })
+        .attr("y", function (d, i) { return i * (scaleWidth / colourScale.range().length) })
+        .style("stroke", "#b3b3b3")
+      ;
+
+      // Adding legend text
+      var colourText = ["0-10%", "10-20%", "20-30%", "30-40%", "40-50%", "50-60%", "60-70%", "70-80%", "80-90%", "90-100%"];
+      var revText = colourText.reverse();
+
+      legendText = svg.append("svg")
+        .attr("class", "legends")
+        .attr("transform", "translate(" + ((margin.left + width) + ",0)"))
+       ;
+
+      legendText.append("g")
+        .attr("class", "LegText")
+        .attr("transform", "translate(" + width * 1.14 + ",180)")
+        .selectAll("text")
+        .data(revText)
+        .enter()
+        .append("text")
+        .text(function (d) { return d; })
+        .attr("y", function (d, i) { return i * (scaleWidth / colourScale.range().length) })
+        .style("font-size", "0.8em")
+      ;
+    });
+
+    //=============================== BUILD ADDITIONAL INFO  =================================
+    var info_clicked = false
+    showInfo = function () {
+      if (!info_clicked) {
+        explanation = d3.select("#viz")
+          .append("div")
+          .attr("class", "explanation")
+          .style("background-color", "grey")
+          .style("border-radius", "10px")
+          .style("padding", "1em")
+          .style("opacity", "0.8")
+          .style("left", (d3.mouse(this)[0]) + margin.left + width / 5 + "px")
+          .style("top", (d3.mouse(this)[1]) + 270 + "px")
+          .html("<strong> Abbreviations: <i><br> \"D.\"</i> </strong> is short for <i><strong> \"Disorder\"</strong></i>, <br> <i><strong>\"Dep.\"</strong></i> is short for <i><strong>\"Dependence\"</strong></i> <p><strong>Explore:</strong><br>Click on rectangles to mark them with a <strong><span style=\"color:rgb(153, 0, 153);\">purple</span></strong> border and click again to remove the border.</p><p><strong>Comorbidity:<br></strong>In medicine and psychology, comorbidity describes the presence of an additional condition (here: secondary disorder) co-occurring with a primary condition (here: primary disorder).</p>");
+        info_clicked = true;
+        info.style("stroke", "rgb(87, 141, 141)");
+      }
+      else if (info_clicked) {
+        d3.select(".explanation").remove()
+        info_clicked = false;
+        info.style("stroke", "none");
+      }
+    }
+
+    info = svg.append("svg")
+      .attr("transform", "translate(" + ((margin.left + width) + ",0)"))
+    ;
+
+    info.append("g")
+      .attr("transform", "translate(" + width * 1.09 + ",0)")
+      .append("rect")
+      .attr("height", "3em")
+      .attr("width", "3em")
+      .attr("fill", "#b3b3b3")
+      .attr("y", "40px")
+      .style("background-color", "grey")
+      .style("cursor", "pointer")
+      .on("click", showInfo)
+      ;
+
+    text = svg.append("svg")
+      .attr("transform", "translate(" + ((margin.left + width) + ",0)"))
+    ;
+
+
+    text.append("g")
+      .attr("transform", "translate(" + width * 1.111 + ",0)")
+      .append("text")
+      .text("i")
+      .attr("y", "80px")
+      .style("font-size", "3em")
+      .style("font-family", "Garamond, sans-serif")
+      .style("cursor", "pointer")
+      .on("click", showInfo)
+    ;
+  }
+
+</script>

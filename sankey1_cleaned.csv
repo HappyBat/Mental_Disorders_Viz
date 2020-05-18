@@ -1,0 +1,55 @@
+Mental Disorder,Physical Disease,Hazard Ratio
+Any affective disorder,Arthritis,3.07
+Any anxiety disorder,Arthritis,2.15
+Any behavior disorder,Arthritis,
+Any substance use disorder,Arthritis,
+Any eating disorder,Arthritis,
+Any mental disorder,Arthritis,1.98
+Any affective disorder,Seasonal allergy,
+Any anxiety disorder,Seasonal allergy,
+Any behavior disorder,Seasonal allergy,
+Any substance use disorder,Seasonal allergy,0.31
+Any eating disorder,Seasonal allergy,
+Any mental disorder,Seasonal allergy,
+Any affective disorder,Skin disease,0.76
+Any anxiety disorder,Skin disease,1.52
+Any behavior disorder,Skin disease,0.91
+Any substance use disorder,Skin disease,0.70
+Any eating disorder,Skin disease,0.38
+Any mental disorder,Skin disease,1.20
+Any affective disorder,Heart disease,
+Any anxiety disorder,Heart disease,1.81
+Any behavior disorder,Heart disease,2.14
+Any substance use disorder,Heart disease,
+Any eating disorder,Heart disease,
+Any mental disorder,Heart disease,
+Any affective disorder,Asthma,
+Any anxiety disorder,Asthma,
+Any behavior disorder,Asthma,
+Any substance use disorder,Asthma,0.40
+Any eating disorder,Asthma,
+Any mental disorder,Asthma,
+Any affective disorder,Diabetes/high blood sugar,1.29
+Any anxiety disorder,Diabetes/high blood sugar,
+Any behavior disorder,Diabetes/high blood sugar,
+Any substance use disorder,Diabetes/high blood sugar,
+Any eating disorder,Diabetes/high blood sugar,
+Any mental disorder,Diabetes/high blood sugar,0.67
+Any affective disorder,Disease of digestive system,3.87
+Any anxiety disorder,Disease of digestive system,2.36
+Any behavior disorder,Disease of digestive system,2.04
+Any substance use disorder,Disease of digestive system,2.41
+Any eating disorder,Disease of digestive system,
+Any mental disorder,Disease of digestive system,2.15
+Any affective disorder,Epilepsy/seizures,1.89
+Any anxiety disorder,Epilepsy/seizures,3.01
+Any behavior disorder,Epilepsy/seizures,1.53
+Any substance use disorder,Epilepsy/seizures,2.20
+Any eating disorder,Epilepsy/seizures,
+Any mental disorder,Epilepsy/seizures,3.65
+Any affective disorder,Any physical disease,0.94
+Any anxiety disorder,Any physical disease,1.28
+Any behavior disorder,Any physical disease,
+Any substance use disorder,Any physical disease,0.71
+Any eating disorder,Any physical disease,0.70
+Any mental disorder,Any physical disease,1.15

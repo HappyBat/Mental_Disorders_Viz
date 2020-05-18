@@ -1,5 +1,4 @@
-# Mental_Disorders_Viz
-d3.js visualisations about comorbidity in mental disorders
+Mental_Disorders_Visualisations
 
 This is a project that developed out of a coursework for Cardiff University.
 

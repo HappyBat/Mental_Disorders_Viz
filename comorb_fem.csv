@@ -1,0 +1,442 @@
+groups,variables,values
+Panic Disorder,Panic Disorder,0
+Panic Disorder,Agoraphobia,0
+Panic Disorder,Social Anxiety D.,55.5
+Panic Disorder,Specific Phobia,46.3
+Panic Disorder,Generalised Anxiety D.,63.3
+Panic Disorder,Obsessive-Compulsive-D.,25.9
+Panic Disorder,Post Traumatic Stress D.,33.7
+Panic Disorder,Major Depressive Episode,61.5
+Panic Disorder,Anorexia Nervosa,0.6
+Panic Disorder,Bulimia Nervosa,9.6
+Panic Disorder,Binge Eating D.,5.8
+Panic Disorder,Cannabis Dep.,5.2
+Panic Disorder,Stimulants Dep.,3.3
+Panic Disorder,Opioids Dep.,2.2
+Panic Disorder,Sedatives Dep.,11.9
+Panic Disorder,Alcohol Dependence,11.9
+Panic Disorder,Somatisation D.,1.2
+Panic Disorder,Body Dysmorphic D.,9.1
+Panic Disorder,Pathological Gambling,3.6
+Panic Disorder,Insomnia,57.7
+Panic Disorder,Hypersomnia,12.2
+Agoraphobia,Panic Disorder,0
+Agoraphobia,Agoraphobia,0
+Agoraphobia,Social Anxiety D.,64.4
+Agoraphobia,Specific Phobia,34.06
+Agoraphobia,Generalised Anxiety D.,60.99
+Agoraphobia,Obsessive-Compulsive-D.,19.81
+Agoraphobia,Post Traumatic Stress D.,26.93
+Agoraphobia,Major Depressive Episode,52.63
+Agoraphobia,Anorexia Nervosa,0
+Agoraphobia,Bulimia Nervosa,4.64
+Agoraphobia,Binge Eating D.,5.88
+Agoraphobia,Cannabis Dep.,5.88
+Agoraphobia,Stimulants Dep.,1.86
+Agoraphobia,Opioids Dep.,0.62
+Agoraphobia,Sedatives Dep.,7.43
+Agoraphobia,Alcohol Dependence,13.93
+Agoraphobia,Somatisation D.,0.31
+Agoraphobia,Body Dysmorphic D.,10.53
+Agoraphobia,Pathological Gambling,3.41
+Agoraphobia,Insomnia,51.08
+Agoraphobia,Hypersomnia,9.6
+Social Anxiety D.,Panic Disorder,31.06
+Social Anxiety D.,Agoraphobia,26.55
+Social Anxiety D.,Social Anxiety D.,0
+Social Anxiety D.,Specific Phobia,35.44
+Social Anxiety D.,Generalised Anxiety D.,60.29
+Social Anxiety D.,Obsessive-Compulsive-D.,18.03
+Social Anxiety D.,Post Traumatic Stress D.,26.43
+Social Anxiety D.,Major Depressive Episode,52.98
+Social Anxiety D.,Anorexia Nervosa,0.61
+Social Anxiety D.,Bulimia Nervosa,8.16
+Social Anxiety D.,Binge Eating D.,6.33
+Social Anxiety D.,Cannabis Dep.,5.6
+Social Anxiety D.,Stimulants Dep.,2.56
+Social Anxiety D.,Opioids Dep.,1.58
+Social Anxiety D.,Sedatives Dep.,5.97
+Social Anxiety D.,Alcohol Dependence,13.64
+Social Anxiety D.,Somatisation D.,1.34
+Social Anxiety D.,Body Dysmorphic D.,13.28
+Social Anxiety D.,Pathological Gambling,2.07
+Social Anxiety D.,Insomnia,49.33
+Social Anxiety D.,Hypersomnia,12.42
+Specific Phobia,Panic Disorder,42.57
+Specific Phobia,Agoraphobia,18.56
+Specific Phobia,Social Anxiety D.,45.3
+Specific Phobia,Specific Phobia,0
+Specific Phobia,Generalised Anxiety D.,59.41
+Specific Phobia,Obsessive-Compulsive-D.,28.71
+Specific Phobia,Post Traumatic Stress D.,34.16
+Specific Phobia,Major Depressive Episode,50.74
+Specific Phobia,Anorexia Nervosa,0.25
+Specific Phobia,Bulimia Nervosa,6.68
+Specific Phobia,Binge Eating D.,6.93
+Specific Phobia,Cannabis Dep.,3.22
+Specific Phobia,Stimulants Dep.,1.73
+Specific Phobia,Opioids Dep.,2.23
+Specific Phobia,Sedatives Dep.,8.17
+Specific Phobia,Alcohol Dependence,15.1
+Specific Phobia,Somatisation D.,2.23
+Specific Phobia,Body Dysmorphic D.,11.39
+Specific Phobia,Pathological Gambling,1.49
+Specific Phobia,Insomnia,51.49
+Specific Phobia,Hypersomnia,11.14
+Generalised Anxiety D.,Panic Disorder,29.93
+Generalised Anxiety D.,Agoraphobia,15.17
+Generalised Anxiety D.,Social Anxiety D.,50.75
+Generalised Anxiety D.,Specific Phobia,34.63
+Generalised Anxiety D.,Generalised Anxiety D.,0
+Generalised Anxiety D.,Obsessive-Compulsive-D.,23.27
+Generalised Anxiety D.,Post Traumatic Stress D.,29.32
+Generalised Anxiety D.,Major Depressive Episode,65.78
+Generalised Anxiety D.,Anorexia Nervosa,0.61
+Generalised Anxiety D.,Bulimia Nervosa,8.5
+Generalised Anxiety D.,Binge Eating D.,7.96
+Generalised Anxiety D.,Cannabis Dep.,4.42
+Generalised Anxiety D.,Stimulants Dep.,2.72
+Generalised Anxiety D.,Opioids Dep.,1.56
+Generalised Anxiety D.,Sedatives Dep.,8.1
+Generalised Anxiety D.,Alcohol Dependence,14.76
+Generalised Anxiety D.,Somatisation D.,0.68
+Generalised Anxiety D.,Body Dysmorphic D.,12.38
+Generalised Anxiety D.,Pathological Gambling,1.84
+Generalised Anxiety D.,Insomnia,61.36
+Generalised Anxiety D.,Hypersomnia,11.7
+Obsessive-Compulsive-D.,Panic Disorder,30.9
+Obsessive-Compulsive-D.,Agoraphobia,13.54
+Obsessive-Compulsive-D.,Social Anxiety D.,44.44
+Obsessive-Compulsive-D.,Specific Phobia,45.14
+Obsessive-Compulsive-D.,Generalised Anxiety D.,63.19
+Obsessive-Compulsive-D.,Obsessive-Compulsive-D.,0
+Obsessive-Compulsive-D.,Post Traumatic Stress D.,26.04
+Obsessive-Compulsive-D.,Major Depressive Episode,54.86
+Obsessive-Compulsive-D.,Anorexia Nervosa,0.69
+Obsessive-Compulsive-D.,Bulimia Nervosa,9.03
+Obsessive-Compulsive-D.,Binge Eating D.,4.17
+Obsessive-Compulsive-D.,Cannabis Dep.,4.17
+Obsessive-Compulsive-D.,Stimulants Dep.,1.74
+Obsessive-Compulsive-D.,Opioids Dep.,0.69
+Obsessive-Compulsive-D.,Sedatives Dep.,5.9
+Obsessive-Compulsive-D.,Alcohol Dependence,7.99
+Obsessive-Compulsive-D.,Somatisation D.,1.04
+Obsessive-Compulsive-D.,Body Dysmorphic D.,14.93
+Obsessive-Compulsive-D.,Pathological Gambling,0.35
+Obsessive-Compulsive-D.,Insomnia,45.83
+Obsessive-Compulsive-D.,Hypersomnia,11.81
+Post Traumatic Stress D.,Panic Disorder,34.02
+Post Traumatic Stress D.,Agoraphobia,15.46
+Post Traumatic Stress D.,Social Anxiety D.,49.23
+Post Traumatic Stress D.,Specific Phobia,43.81
+Post Traumatic Stress D.,Generalised Anxiety D.,59.02
+Post Traumatic Stress D.,Obsessive-Compulsive-D.,35.57
+Post Traumatic Stress D.,Post Traumatic Stress D.,0
+Post Traumatic Stress D.,Major Depressive Episode,66.24
+Post Traumatic Stress D.,Anorexia Nervosa,1.03
+Post Traumatic Stress D.,Bulimia Nervosa,10.82
+Post Traumatic Stress D.,Binge Eating D.,7.22
+Post Traumatic Stress D.,Cannabis Dep.,8.76
+Post Traumatic Stress D.,Stimulants Dep.,3.61
+Post Traumatic Stress D.,Opioids Dep.,4.64
+Post Traumatic Stress D.,Sedatives Dep.,12.37
+Post Traumatic Stress D.,Alcohol Dependence,14.18
+Post Traumatic Stress D.,Somatisation D.,4.12
+Post Traumatic Stress D.,Body Dysmorphic D.,10.82
+Post Traumatic Stress D.,Pathological Gambling,2.84
+Post Traumatic Stress D.,Insomnia,62.63
+Post Traumatic Stress D.,Hypersomnia,11.08
+Major Depressive Episode,Panic Disorder,28.68
+Major Depressive Episode,Agoraphobia,18.23
+Major Depressive Episode,Social Anxiety D.,52.87
+Major Depressive Episode,Specific Phobia,34.7
+Major Depressive Episode,Generalised Anxiety D.,62.12
+Major Depressive Episode,Obsessive-Compulsive-D.,26.41
+Major Depressive Episode,Post Traumatic Stress D.,37.25
+Major Depressive Episode,Major Depressive Episode,0
+Major Depressive Episode,Anorexia Nervosa,0.97
+Major Depressive Episode,Bulimia Nervosa,14.82
+Major Depressive Episode,Binge Eating D.,8.63
+Major Depressive Episode,Cannabis Dep.,6.64
+Major Depressive Episode,Stimulants Dep.,3.98
+Major Depressive Episode,Opioids Dep.,2.73
+Major Depressive Episode,Sedatives Dep.,9.26
+Major Depressive Episode,Alcohol Dependence,19.19
+Major Depressive Episode,Somatisation D.,1.31
+Major Depressive Episode,Body Dysmorphic D.,16.7
+Major Depressive Episode,Pathological Gambling,2.9
+Major Depressive Episode,Insomnia,69.51
+Major Depressive Episode,Hypersomnia,21.18
+Anorexia Nervosa,Panic Disorder,27.27
+Anorexia Nervosa,Agoraphobia,9.09
+Anorexia Nervosa,Social Anxiety D.,63.64
+Anorexia Nervosa,Specific Phobia,36.36
+Anorexia Nervosa,Generalised Anxiety D.,72.73
+Anorexia Nervosa,Obsessive-Compulsive-D.,45.45
+Anorexia Nervosa,Post Traumatic Stress D.,18.18
+Anorexia Nervosa,Major Depressive Episode,90.91
+Anorexia Nervosa,Anorexia Nervosa,0
+Anorexia Nervosa,Bulimia Nervosa,63.64
+Anorexia Nervosa,Binge Eating D.,0
+Anorexia Nervosa,Cannabis Dep.,0
+Anorexia Nervosa,Stimulants Dep.,0
+Anorexia Nervosa,Opioids Dep.,0
+Anorexia Nervosa,Sedatives Dep.,0
+Anorexia Nervosa,Alcohol Dependence,9.09
+Anorexia Nervosa,Somatisation D.,9.09
+Anorexia Nervosa,Body Dysmorphic D.,9.09
+Anorexia Nervosa,Pathological Gambling,9.09
+Anorexia Nervosa,Insomnia,63.64
+Anorexia Nervosa,Hypersomnia,0
+Bulimia Nervosa,Panic Disorder,26.3
+Bulimia Nervosa,Agoraphobia,13.36
+Bulimia Nervosa,Social Anxiety D.,49.9
+Bulimia Nervosa,Specific Phobia,26.51
+Bulimia Nervosa,Generalised Anxiety D.,51.77
+Bulimia Nervosa,Obsessive-Compulsive-D.,35.7
+Bulimia Nervosa,Post Traumatic Stress D.,33.4
+Bulimia Nervosa,Major Depressive Episode,71.19
+Bulimia Nervosa,Anorexia Nervosa,2.92
+Bulimia Nervosa,Bulimia Nervosa,0
+Bulimia Nervosa,Binge Eating D.,0
+Bulimia Nervosa,Cannabis Dep.,7.72
+Bulimia Nervosa,Stimulants Dep.,7.93
+Bulimia Nervosa,Opioids Dep.,5.22
+Bulimia Nervosa,Sedatives Dep.,10.44
+Bulimia Nervosa,Alcohol Dependence,21.92
+Bulimia Nervosa,Somatisation D.,2.51
+Bulimia Nervosa,Body Dysmorphic D.,50.73
+Bulimia Nervosa,Pathological Gambling,2.09
+Bulimia Nervosa,Insomnia,59.29
+Bulimia Nervosa,Hypersomnia,12.11
+Binge Eating D.,Panic Disorder,21.9
+Binge Eating D.,Agoraphobia,15.24
+Binge Eating D.,Social Anxiety D.,50.48
+Binge Eating D.,Specific Phobia,29.52
+Binge Eating D.,Generalised Anxiety D.,60
+Binge Eating D.,Obsessive-Compulsive-D.,22.86
+Binge Eating D.,Post Traumatic Stress D.,41.9
+Binge Eating D.,Major Depressive Episode,67.62
+Binge Eating D.,Anorexia Nervosa,0
+Binge Eating D.,Bulimia Nervosa,0
+Binge Eating D.,Binge Eating D.,0
+Binge Eating D.,Cannabis Dep.,3.81
+Binge Eating D.,Stimulants Dep.,0.95
+Binge Eating D.,Opioids Dep.,1.9
+Binge Eating D.,Sedatives Dep.,7.62
+Binge Eating D.,Alcohol Dependence,11.43
+Binge Eating D.,Somatisation D.,0
+Binge Eating D.,Body Dysmorphic D.,17.14
+Binge Eating D.,Pathological Gambling,0.95
+Binge Eating D.,Insomnia,47.62
+Binge Eating D.,Hypersomnia,12.38
+Cannabis Dep.,Panic Disorder,42.86
+Cannabis Dep.,Agoraphobia,14.29
+Cannabis Dep.,Social Anxiety D.,57.14
+Cannabis Dep.,Specific Phobia,46.43
+Cannabis Dep.,Generalised Anxiety D.,64.29
+Cannabis Dep.,Obsessive-Compulsive-D.,32.14
+Cannabis Dep.,Post Traumatic Stress D.,53.57
+Cannabis Dep.,Major Depressive Episode,78.57
+Cannabis Dep.,Anorexia Nervosa,0
+Cannabis Dep.,Bulimia Nervosa,21.43
+Cannabis Dep.,Binge Eating D.,28.57
+Cannabis Dep.,Cannabis Dep.,0
+Cannabis Dep.,Stimulants Dep.,25
+Cannabis Dep.,Opioids Dep.,10.71
+Cannabis Dep.,Sedatives Dep.,25
+Cannabis Dep.,Alcohol Dependence,25
+Cannabis Dep.,Somatisation D.,3.57
+Cannabis Dep.,Body Dysmorphic D.,21.43
+Cannabis Dep.,Pathological Gambling,7.14
+Cannabis Dep.,Insomnia,50
+Cannabis Dep.,Hypersomnia,28.57
+Stimulants Dep.,Panic Disorder,44.44
+Stimulants Dep.,Agoraphobia,11.11
+Stimulants Dep.,Social Anxiety D.,55.56
+Stimulants Dep.,Specific Phobia,0
+Stimulants Dep.,Generalised Anxiety D.,44.44
+Stimulants Dep.,Obsessive-Compulsive-D.,44.44
+Stimulants Dep.,Post Traumatic Stress D.,55.56
+Stimulants Dep.,Major Depressive Episode,55.56
+Stimulants Dep.,Anorexia Nervosa,11.11
+Stimulants Dep.,Bulimia Nervosa,22.22
+Stimulants Dep.,Binge Eating D.,11.11
+Stimulants Dep.,Cannabis Dep.,44.44
+Stimulants Dep.,Stimulants Dep.,0
+Stimulants Dep.,Opioids Dep.,22.22
+Stimulants Dep.,Sedatives Dep.,33.33
+Stimulants Dep.,Alcohol Dependence,33.33
+Stimulants Dep.,Somatisation D.,0
+Stimulants Dep.,Body Dysmorphic D.,0
+Stimulants Dep.,Pathological Gambling,11.11
+Stimulants Dep.,Insomnia,55.56
+Stimulants Dep.,Hypersomnia,11.11
+Opioids Dep.,Panic Disorder,40
+Opioids Dep.,Agoraphobia,20
+Opioids Dep.,Social Anxiety D.,60
+Opioids Dep.,Specific Phobia,40
+Opioids Dep.,Generalised Anxiety D.,40
+Opioids Dep.,Obsessive-Compulsive-D.,40
+Opioids Dep.,Post Traumatic Stress D.,40
+Opioids Dep.,Major Depressive Episode,80
+Opioids Dep.,Anorexia Nervosa,0
+Opioids Dep.,Bulimia Nervosa,20
+Opioids Dep.,Binge Eating D.,0
+Opioids Dep.,Cannabis Dep.,40
+Opioids Dep.,Stimulants Dep.,20
+Opioids Dep.,Opioids Dep.,0
+Opioids Dep.,Sedatives Dep.,60
+Opioids Dep.,Alcohol Dependence,40
+Opioids Dep.,Somatisation D.,20
+Opioids Dep.,Body Dysmorphic D.,40
+Opioids Dep.,Pathological Gambling,20
+Opioids Dep.,Insomnia,80
+Opioids Dep.,Hypersomnia,20
+Sedatives Dep.,Panic Disorder,28.57
+Sedatives Dep.,Agoraphobia,14.29
+Sedatives Dep.,Social Anxiety D.,50
+Sedatives Dep.,Specific Phobia,35.71
+Sedatives Dep.,Generalised Anxiety D.,50
+Sedatives Dep.,Obsessive-Compulsive-D.,14.29
+Sedatives Dep.,Post Traumatic Stress D.,57.14
+Sedatives Dep.,Major Depressive Episode,57.14
+Sedatives Dep.,Anorexia Nervosa,0
+Sedatives Dep.,Bulimia Nervosa,7.14
+Sedatives Dep.,Binge Eating D.,0
+Sedatives Dep.,Cannabis Dep.,7.14
+Sedatives Dep.,Stimulants Dep.,21.43
+Sedatives Dep.,Opioids Dep.,7.14
+Sedatives Dep.,Sedatives Dep.,0
+Sedatives Dep.,Alcohol Dependence,7.14
+Sedatives Dep.,Somatisation D.,0
+Sedatives Dep.,Body Dysmorphic D.,14.29
+Sedatives Dep.,Pathological Gambling,0
+Sedatives Dep.,Insomnia,57.14
+Sedatives Dep.,Hypersomnia,14.29
+Alcohol Dependence,Panic Disorder,22.11
+Alcohol Dependence,Agoraphobia,4.21
+Alcohol Dependence,Social Anxiety D.,46.32
+Alcohol Dependence,Specific Phobia,20
+Alcohol Dependence,Generalised Anxiety D.,38.95
+Alcohol Dependence,Obsessive-Compulsive-D.,18.95
+Alcohol Dependence,Post Traumatic Stress D.,28.42
+Alcohol Dependence,Major Depressive Episode,50.53
+Alcohol Dependence,Anorexia Nervosa,0
+Alcohol Dependence,Bulimia Nervosa,17.89
+Alcohol Dependence,Binge Eating D.,6.32
+Alcohol Dependence,Cannabis Dep.,17.89
+Alcohol Dependence,Stimulants Dep.,13.68
+Alcohol Dependence,Opioids Dep.,5.26
+Alcohol Dependence,Sedatives Dep.,12.63
+Alcohol Dependence,Alcohol Dependence,0
+Alcohol Dependence,Somatisation D.,1.05
+Alcohol Dependence,Body Dysmorphic D.,10.53
+Alcohol Dependence,Pathological Gambling,5.26
+Alcohol Dependence,Insomnia,42.11
+Alcohol Dependence,Hypersomnia,16.84
+Somatisation D.,Panic Disorder,57.5
+Somatisation D.,Agoraphobia,25
+Somatisation D.,Social Anxiety D.,65
+Somatisation D.,Specific Phobia,50
+Somatisation D.,Generalised Anxiety D.,72.5
+Somatisation D.,Obsessive-Compulsive-D.,35
+Somatisation D.,Post Traumatic Stress D.,55
+Somatisation D.,Major Depressive Episode,77.5
+Somatisation D.,Anorexia Nervosa,2.5
+Somatisation D.,Bulimia Nervosa,15
+Somatisation D.,Binge Eating D.,12.5
+Somatisation D.,Cannabis Dep.,0
+Somatisation D.,Stimulants Dep.,5
+Somatisation D.,Opioids Dep.,5
+Somatisation D.,Sedatives Dep.,12.5
+Somatisation D.,Alcohol Dependence,20
+Somatisation D.,Somatisation D.,0
+Somatisation D.,Body Dysmorphic D.,17.5
+Somatisation D.,Pathological Gambling,10
+Somatisation D.,Insomnia,80
+Somatisation D.,Hypersomnia,25
+Body Dysmorphic D.,Panic Disorder,31.63
+Body Dysmorphic D.,Agoraphobia,20.66
+Body Dysmorphic D.,Social Anxiety D.,67.09
+Body Dysmorphic D.,Specific Phobia,40.05
+Body Dysmorphic D.,Generalised Anxiety D.,65.31
+Body Dysmorphic D.,Obsessive-Compulsive-D.,34.95
+Body Dysmorphic D.,Post Traumatic Stress D.,36.48
+Body Dysmorphic D.,Major Depressive Episode,67.6
+Body Dysmorphic D.,Anorexia Nervosa,2.3
+Body Dysmorphic D.,Bulimia Nervosa,29.34
+Body Dysmorphic D.,Binge Eating D.,16.07
+Body Dysmorphic D.,Cannabis Dep.,7.91
+Body Dysmorphic D.,Stimulants Dep.,5.61
+Body Dysmorphic D.,Opioids Dep.,2.3
+Body Dysmorphic D.,Sedatives Dep.,7.91
+Body Dysmorphic D.,Alcohol Dependence,19.64
+Body Dysmorphic D.,Somatisation D.,1.53
+Body Dysmorphic D.,Body Dysmorphic D.,0
+Body Dysmorphic D.,Pathological Gambling,1.02
+Body Dysmorphic D.,Insomnia,63.78
+Body Dysmorphic D.,Hypersomnia,12.76
+Pathological Gambling,Panic Disorder,25
+Pathological Gambling,Agoraphobia,0
+Pathological Gambling,Social Anxiety D.,37.5
+Pathological Gambling,Specific Phobia,37.5
+Pathological Gambling,Generalised Anxiety D.,25
+Pathological Gambling,Obsessive-Compulsive-D.,12.5
+Pathological Gambling,Post Traumatic Stress D.,12.5
+Pathological Gambling,Major Depressive Episode,75
+Pathological Gambling,Anorexia Nervosa,0
+Pathological Gambling,Bulimia Nervosa,0
+Pathological Gambling,Binge Eating D.,12.5
+Pathological Gambling,Cannabis Dep.,25
+Pathological Gambling,Stimulants Dep.,0
+Pathological Gambling,Opioids Dep.,0
+Pathological Gambling,Sedatives Dep.,0
+Pathological Gambling,Alcohol Dependence,12.5
+Pathological Gambling,Somatisation D.,0
+Pathological Gambling,Body Dysmorphic D.,12.5
+Pathological Gambling,Pathological Gambling,0
+Pathological Gambling,Insomnia,50
+Pathological Gambling,Hypersomnia,12.5
+Insomnia,Panic Disorder,27.7
+Insomnia,Agoraphobia,14.67
+Insomnia,Social Anxiety D.,45.6
+Insomnia,Specific Phobia,33.02
+Insomnia,Generalised Anxiety D.,61.92
+Insomnia,Obsessive-Compulsive-D.,24.1
+Insomnia,Post Traumatic Stress D.,38.58
+Insomnia,Major Depressive Episode,62.3
+Insomnia,Anorexia Nervosa,0.89
+Insomnia,Bulimia Nervosa,11.51
+Insomnia,Binge Eating D.,7.84
+Insomnia,Cannabis Dep.,4.68
+Insomnia,Stimulants Dep.,3.1
+Insomnia,Opioids Dep.,3.16
+Insomnia,Sedatives Dep.,10.82
+Insomnia,Alcohol Dependence,14.17
+Insomnia,Somatisation D.,1.96
+Insomnia,Body Dysmorphic D.,13.47
+Insomnia,Pathological Gambling,2.66
+Insomnia,Insomnia,0
+Insomnia,Hypersomnia,10.18
+Hypersomnia,Panic Disorder,29.26
+Hypersomnia,Agoraphobia,18.09
+Hypersomnia,Social Anxiety D.,55.85
+Hypersomnia,Specific Phobia,33.51
+Hypersomnia,Generalised Anxiety D.,67.55
+Hypersomnia,Obsessive-Compulsive-D.,21.81
+Hypersomnia,Post Traumatic Stress D.,34.57
+Hypersomnia,Major Depressive Episode,73.4
+Hypersomnia,Anorexia Nervosa,1.06
+Hypersomnia,Bulimia Nervosa,13.3
+Hypersomnia,Binge Eating D.,9.04
+Hypersomnia,Cannabis Dep.,6.38
+Hypersomnia,Stimulants Dep.,5.32
+Hypersomnia,Opioids Dep.,3.72
+Hypersomnia,Sedatives Dep.,11.7
+Hypersomnia,Alcohol Dependence,13.3
+Hypersomnia,Somatisation D.,2.66
+Hypersomnia,Body Dysmorphic D.,20.21
+Hypersomnia,Pathological Gambling,3.19
+Hypersomnia,Insomnia,60.64
+Hypersomnia,Hypersomnia,0

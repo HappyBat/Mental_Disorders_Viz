@@ -1,0 +1,390 @@
+/************** COURSEWORK II *******************/
+
+*{box-sizing: border-box}
+
+
+body{
+  margin:0;
+  font-family: Verdana, sans-serif;
+  background-color: black;
+  border: 0.4em solid rgb(87, 141, 141);
+  padding: 1em;
+  font-size: 2vw;
+  line-height: 2;
+  color: white;
+}
+
+header{
+    height: 10vw;
+    }
+
+/* set individual size for headers */
+h1,h2,h3,h4,h5,h6{
+  font-family: "Verdana", sans-serif;
+  color: white;
+}
+
+body >h1{
+  font-size: 3vw;
+}
+
+body >h2{
+  font-size: 1vw;
+}
+
+main >div{
+  background-color: black;
+}
+
+/* show selected items and make them more visual */
+main >div >section >div:hover{
+  border: 0.4vw solid rgb(87, 141, 141);
+  background-color: #282828;
+  padding: 1vw;}
+
+main >div >div:hover{
+    border: 0.4vw solid rgb(87, 141, 141);
+    background-color: #282828;
+    padding: 1vw;}
+
+/* remove underlining for commonly agreed links */
+a{
+  color: white;
+  font-variant: small-caps;
+  text-decoration:none;
+}
+
+#logo_header {
+  display: inline-block;
+  float:left;
+  top: 0;
+  left: 0;
+  position:absolute;
+  color:white;
+  text-align:left;
+  margin-left: 1em;
+  min-width: 400px;
+  font-size: 2vw;
+}
+
+#logo_footer {
+  display: inline-block;
+  float:left;
+  bottom: 0;
+  right: 0;
+  position:absolute;
+  color:white;
+  text-align:right;
+  margin-right: 1em;
+  min-width: 400px;
+  font-size: 2vw;
+}
+
+#transparent{
+  background-color: hsl(0, 0%, 0%, 0.6);
+}
+
+#header{background-color: rgb(87, 141, 141);}
+
+#footer{background-color: rgb(87, 141, 141);}
+
+
+
+/* ===========================================================================
+FORMATTING ELEMENTS IN THE GRID-CONTAINER
+============================================================================= */
+
+.grid-container{
+  display: grid;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+}
+
+.nested-grid-container{
+  grid-row: 3/7;
+  display: grid;
+  grid-row-gap: 1em;
+}
+
+
+/* Hamburger Menu
+==============================================================================*/
+  /*Code Reference*/
+    /*Code to build pure CSShamburger menu
+    This code was adapted from CODEBOXX-tutorial by W.S. Toh
+    Title: "2 Steps Simple Responsive Pure CSS Hamburger Menu"
+    accessed 31-10-2019
+    https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/
+    generally adapted for mobile first and unecessary features omitted
+    see further comments for adaptions
+  */
+
+/* [START OF ADAPTED CODE] */
+  #page-nav { /*(adapted position)*/
+    width: 100%;
+    position: sticky;
+    top:0;
+    padding: 1em;
+  }
+
+  #page-nav ul { /* (adapted styling) */
+    list-style-type: none;
+    background-color: rgb(87, 141, 141));
+    padding:inherit;
+  }
+
+ /* Hamburger appearance (adapted styling) */
+  #page-nav label {
+    display: inline-block;
+    color: black;
+    background: white;
+    font-size: 5vw;
+    /* Keep hamburger same position as checkbox (adapted position)*/
+    position: absolute;
+    top: 0;
+  }
+
+  /* Make checkbox invisible (added to original code)*/
+  #hamburger{
+    opacity: 0;
+  }
+
+  /* Do not show navigation by default */
+  #page-nav ul{
+    display: none;
+  }
+
+  /* Show navigation if hamburger selected */
+  #page-nav input:checked ~ ul {
+    display: block;
+  }
+
+
+/* [END OF ADAPTED CODE] */
+
+
+/* ===========================================================================
+FORMATTING HEADER
+============================================================================= */
+
+.header{
+  text-align: right;
+  top: 0;
+  position: sticky;
+}
+
+
+/* ===========================================================================
+FORMATTING ITEMS IN MAIN
+============================================================================= */
+
+.main{
+  background-color: black;
+  margin: 0;
+}
+
+.main >div {
+ margin: 1em;
+}
+
+.teaser{
+  grid-column: 1/2;
+  grid-row: 2;
+  color: white;
+  text-shadow: -0.1em 0 black, 0 0.1em black, 0.1em 0 black, 0 -0.1em black;
+  background-image:url("../img/code.png");
+  background-size:contain;
+  background-size: 100% 100%;
+  height: 50vw;
+}
+
+.heatmap_img{
+  grid-column: 1/2;
+  grid-row: 3 ;
+  color: white;
+  border: 2px solid lightgrey;
+  text-align:left;
+  background-image: url("../img/heatmap.png");
+  background-size: 100% 100%;
+  height: 70vw;
+}
+
+.heatmap_txt{
+  grid-column: 1/2;
+  grid-row: 4;
+}
+
+.sankey_img{
+  grid-column: 1/2;
+  grid-row:5 ;
+  color: white;
+  text-align: left;
+  background-image: url("../img/sankey.png");
+  background-size: 100% 100%;
+  height: 70vw;
+}
+
+.sankey_txt{
+  grid-column: 1/2;
+  grid-row: 6;
+}
+
+
+
+/* ===========================================================================
+FORMATTING   FOOTER
+============================================================================= */
+
+.footer{
+  min-height: 10vw;
+  bottom: 0;
+}
+
+#page-nav2{
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: relative;
+}
+
+#page-nav2 ul {
+  list-style-type: none;
+}
+
+
+/* ===========================================================================
+DESKTOP VERSION
+============================================================================= */
+
+@media only screen and (min-width:1000px) {
+  body{
+  font-size: 1vw;
+  }
+
+  header{
+  max-height: 15vw;
+  }
+
+  #logo_header {
+    font-size: 2vw;
+  }
+
+  #logo_footer {
+    display: inline-block;
+    float:left;
+    bottom: 0;
+    right: 0;
+    position:absolute;
+    color:white;
+    text-align:right;
+    margin-right: 1em;
+    min-width: 400px;
+    font-size: 2vw;
+  }
+
+  #quote {
+    background-color: white;
+    color: black;
+    text-align: right;
+    font-size: 1.5em;
+    margin-bottom: 1.5vw;
+    line-height: 1.5em;
+  }
+
+  #quote a{
+    color: black;
+    text-align: right;
+    font-size: 1em;
+  }
+
+  /* Adjust Hamburger/Nav-Bar Menu for desktop
+  ==============================================================================*/
+
+  /* Change colour to header colour */
+  #page-nav ul{
+    background-color: rgb(87, 141, 141);
+  }
+
+  /* Do not show hamburger */
+  #page-nav label, #hamburger {
+
+    display: none;
+  }
+
+  /* Align navigation items horizontally */
+  #page-nav ul li {
+    display: inline-block;
+    padding-left: 3em;
+  }
+
+  #page-nav ul li a{
+    color: white;
+  }
+
+  /* Display navigation items as block if no input */
+  #page-nav input:empty ~ ul {
+    display: inline-block;
+  }
+
+
+  /* Restructure grid (item3+4 in juxtaposition); item 6,7 and 8 in juxtaposition)
+  ==============================================================================*/
+
+  .grid-container {
+    grid-template-columns:repeat(6, 1fr);
+  }
+
+  .nested-grid-container{
+    grid-column: 1/7;
+    grid-row: 5/8;
+    display: grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-column-gap: 2em;
+  }
+
+  .teaser{
+    grid-column: 1/7;
+    grid-row: 2/5;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-image:url("../img/code.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    min-height: 20vw;
+  }
+
+  .heatmap_img{
+    grid-column: 1/4;
+    grid-row: 5/8;
+    color: white;
+    border: 2px solid lightgrey;
+    text-align:left;
+    background-image: url("../img/heatmap.png");
+    background-size: 100% 100%;
+    height: 50vw;
+    min-height: 15vw;
+  }
+
+  .heatmap_txt{
+    grid-column: 1/4;
+    grid-row: 8;
+  }
+
+  .sankey_img{
+    grid-column: 4/7;
+    grid-row: 5/8;
+    color: white;
+    text-align: left;
+    background-image: url("../img/sankey.png");
+    background-size: 100% 100%;
+    height: 50vw;
+  }
+
+  .sankey_txt{
+    grid-column: 4/7;
+    grid-row:8;
+  }
+
+
+}

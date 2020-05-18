@@ -1,0 +1,574 @@
+<!--===========  C1961593	CMT218 Data Visualisation  ================-->
+<!--==========================  SANKEY GRAPH	=============================-->
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+<!-- Load the sankey.js function -->
+<script src="sankey.js"></script>
+
+<header class="header" id="header">
+  <nav id= "page-nav">
+
+    <div id="logo_header">
+      <a href=""> 
+        Coursework II
+      </a>
+    </div>
+    <!-- Code Reference*/
+      /*Code to build pure CSShamburger menu
+      This code was adapted from CODEBOXX-tutorial by W.S. Toh
+      Title: "2 Steps Simple Responsive Pure CSS Hamburger Menu"
+      accessed 31-10-2019
+      https://code-boxx.com/simple-responsive-pure-css-hamburger-menu/
+      generally adapted for mobile first and unecessary features omitted
+      see further comments for adaptions
+    -->
+    <!-- [START OF ADAPTED CODE] -->
+      <!-- add HTML symbol for hamburger -->
+      <label for="hamburger">&#9776; </label>
+      <input type="checkbox" id="hamburger" />
+
+      <ul>
+        <li class="nav-item">
+          <a href="heatmap.html">
+          Comorbidity between Mental Disorders
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="sankey.html">
+            Comorbidity of Mental and Physical Diseases
+          </a>
+        </li>
+
+      <!-- [END OF ADAPTED CODE] -->
+    </ul>
+  </nav>
+</header>
+<!-- The div where the viz will go -->
+<div id="viz">
+</div>
+</div>
+<div id="#buttons">
+  <input type="button" id="M_P" value="mental to physical" />
+  <input type="button" id="P_M" value="physical to mental" />
+</div>
+
+<style>
+  body {
+    width: 1100px;
+    height: 800px;
+    position: relative;
+    background: #f2f2f2;
+    font-family: "Verdana", sans-serif;
+  }
+
+  .node rect {
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+  }
+
+  .node text {
+    text-shadow: 0 1px 0 #fff;
+  }
+
+  .link_b {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+  }
+
+  .link_g {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+  }
+
+  .link_b:hover {
+    stroke: #446f6f;
+    stroke-opacity: .7
+  }
+
+  .link_g:hover {
+    stroke: rgb(114, 161, 114);
+    stroke-opacity: 0.9;
+  }
+
+  input {
+    margin-left: 30px;
+    margin-top: 50px;
+    float: left;
+    background-color: rgb(164, 200, 200);
+    border: 0.1em solid#1e7b1e;/ color: black;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 5%;;
+  }
+
+  header{
+    height: 10vw;
+    }
+
+  #header{background-color: rgb(87, 141, 141);}
+  #logo_header {
+  display: inline-block;
+  float:left;
+  top: 0;
+  left: 0;
+  position:absolute;
+  color:white;
+  text-align:left;
+  margin-left: 1em;
+  min-width: 400px;
+  font-size: 2vw;
+  }
+  
+  a{
+  color: white;
+  font-variant: small-caps;
+  text-decoration:none;
+  }
+  /* [START OF ADAPTED CODE] */
+  #page-nav { /*(adapted position)*/
+    width: 100%;
+    position: sticky;
+    top:0;
+    padding: 1em;
+  }
+
+  #page-nav ul { /* (adapted styling) */
+    list-style-type: none;
+    background-color: rgb(87, 141, 141));
+    padding:inherit;
+  }
+
+ /* Hamburger appearance (adapted styling) */
+  #page-nav label {
+    display: inline-block;
+    color: black;
+    background: white;
+    font-size: 1.5vw;
+    /* Keep hamburger same position as checkbox (adapted position)*/
+    position: absolute;
+    top: 0;
+  }
+
+  /* Make checkbox invisible (added to original code)*/
+  #hamburger{
+    opacity: 0;
+  }
+
+  /* Do not show navigation by default */
+  #page-nav ul{
+    display: none;
+  }
+
+  /* Show navigation if hamburger selected */
+  #page-nav input:checked ~ ul {
+    display: block;
+    padding-right: 3em;
+    margin-top: 0;
+    padding-top: 0.5em;
+    font-size: 1.2em;
+  }
+
+/* [END OF ADAPTED CODE] */
+
+
+/* ===========================================================================
+FORMATTING HEADER
+============================================================================= */
+
+.header{
+  text-align: right;
+  top: 0;
+  position: sticky;
+}
+#logo_footer {
+  display: inline-block;
+  float:left;
+  bottom: 0;
+  right: 0;
+  position:absolute;
+  color:white;
+  text-align:right;
+  margin-right: 1em;
+  min-width: 400px;
+  font-size: 2vw;
+}
+#footer{background-color: rgb(87, 141, 141);}
+/* ===========================================================================
+FORMATTING   FOOTER
+============================================================================= */
+
+.footer{
+  min-height: 10vw;
+  margin-top:10em;
+  bottom: 0;
+  min-width: 100vw;
+}
+
+#page-nav2{
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: relative;
+}
+
+#page-nav2 ul {
+  list-style-type: none;
+  font-size: 1.2em;
+  padding-top: 2em;
+}
+@media only screen and (min-width:1000px) {
+  body{
+  font-size: 1vw;
+  }
+
+  header{
+  max-height: 15vw;
+  min-width: 100vw;
+  }
+
+  #logo_header {
+    font-size: 2vw;
+  }
+
+  #logo_footer {
+    display: inline-block;
+    float:left;
+    bottom: 0;
+    right: 0;
+    position:absolute;
+    color:white;
+    text-align:right;
+    margin-right: 1em;
+    min-width: 400px;
+    font-size: 2vw;
+  }
+
+
+  /* Adjust Hamburger/Nav-Bar Menu for desktop
+  ==============================================================================*/
+
+  /* Change colour to header colour */
+  #page-nav ul{
+    background-color: rgb(87, 141, 141);
+    font-size: 1.5em;
+    padding-right: 5em;
+    padding-top: 1.5em;
+  }
+
+  /* Do not show hamburger */
+  #page-nav label, #hamburger {
+    display: none;
+  }
+
+  /* Align navigation items horizontally */
+  #page-nav ul li {
+    display: inline-block;
+    padding-left: 3em;
+    margin-top: 20px;
+  }
+
+  #page-nav ul li a{
+    color: white;
+  }
+
+  /* Display navigation items as block if no input */
+  #page-nav input:empty ~ ul {
+    display: inline-block;
+  }
+
+} 
+</style>
+
+<script>
+
+  var units = "Widgets";
+
+  // set the dimensions and margins of the graph
+  var margin = { top: 260, right: 50, bottom: 30, left: 30 },
+    width = 1100 - margin.left - margin.right,
+    height = 1000 - margin.top - margin.bottom;
+
+  // format variables
+  var formatNumber = d3.format(",.0f"),    // zero decimal places
+    format = function (d) { return formatNumber(d) + " " + units; },
+
+    blues = ["#ffffff", "#eff5f5", "#dfecec", "#d0e2e2", "#c0d8d8", "#b0cfcf", "#a0c5c5", "#90bbbb", "#81b1b1", "#71a8a8"];//,
+  greens = ["#ffffff", "#eafaea", "#d6f5d6", "#c1f0c1", "#adebad", "#98e698", "#84e184", "#6fdc6f", "#5bd75b", "#46d246"]
+
+  var myColour_b = d3.scaleLinear()
+    .domain([1, 2, 3, 4, 5, 6])
+    .range(blues)
+  var myColour_g = d3.scaleLinear()
+    .domain([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    .range(greens)
+
+
+  // load the data
+  var MP = "MD_PD.json";
+  var PM = "PD_MD.json";
+
+  //On click call the sankeyData function
+  d3.select("#M_P").on("click", sankeyData(MP));
+  d3.select("#M_P").on("click", function () { sankeyData(MP) });//function (d) { update(d, "mp"); });
+  d3.select("#P_M").on("click", function () { sankeyData(PM) }); //function (d) { sankeyData("sankey_data.json"); });
+
+  //sankey data function reads in the correct dataset (on of the two)
+  function sankeyData(data) {
+
+    //first remove previous svg
+    d3.select("svg").remove();
+
+    //load and read the data, execute the function that creates sankey
+
+    d3.json(data).then(function (graph) {//sankey_data //dubidubida
+
+      // append the svg object to the body of the page
+      var svg = d3.select("#viz").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+      // Set the sankey diagram properties
+      var sankey = d3.sankey()
+        .nodeWidth(36)
+        .nodePadding(40)
+        .size([width, height]);
+
+      var path = sankey.link();
+
+      //graph title
+      svg.append("text")
+        .attr("x", 0)
+        .attr("y", -170)
+        .style("font-size", "2.4em")
+        .style("font-weight", "bold")
+        .text("Comorbidity of Mental and Physical Diseases");
+
+      //the arrow to illustrate comorbidity direction
+      svg.append("text")
+        .attr("x", 450)
+        .attr("y", -50)
+        .style("fill", "darkgrey")
+        .style("font-size", "5em")
+        .style("font-weight", "bold")
+        .html("&#x2192");
+
+
+      //Update the headings & subtitle if mental and physical disorders change sides
+
+      if (data == "MD_PD.json") {
+        //Heading
+        svg.append("text")
+          .attr("x", 0)
+          .attr("y", -60)
+          .style("fill", "#446f6f")
+          .style("font-size", "1.8em")
+          .style("font-weight", "bold")
+          .text("Mental Disorder");
+
+        //Heading
+        svg.append("text")
+          .attr("x", 740)
+          .attr("y", -60)
+          .style("fill", "#1e7b1e")
+          .style("font-size", "1.8em")
+          .style("font-weight", "bold")
+          .text("Physical Disorder");
+
+        // Subtitle
+        svg.append("text")
+          .attr("x", 0)
+          .attr("y", -130)
+          .attr("width", 200)
+          .style("fill", "grey")
+          .style("font-size", "1.3em")
+          .text("Affective, anxiety & mental disorders often precede arthritis, epilepsy & diseases of digestive system.");
+      }
+      else {
+        //Heading
+        svg.append("text")
+          .attr("x", 765)
+          .attr("y", -60)
+          .style("fill", "#446f6f")
+          .style("font-size", "1.8em")
+          .style("font-weight", "bold")
+          .text("Mental Disorder");
+
+        //Heading
+        svg.append("text")
+          .attr("x", 0)
+          .attr("y", -60)
+          .style("fill", "#1e7b1e")
+          .style("font-size", "1.8em")
+          .style("font-weight", "bold")
+          .text("Physical Disorder");
+
+        // Subtitle
+        svg.append("text")
+          .attr("x", 0)
+          .attr("y", -130)
+          .attr("width", 200)
+          .style("fill", "grey")
+          .style("font-size", "1.8em")
+          .text("Seasonal allergy often precedes eating disorders.");
+      }
+        //append the links to the data source above the sankey
+        svg.append("text")
+          .attr("x", 0)
+          .attr("y", -15)
+          .style("fill", "grey")
+          .style("font-size", "1em")
+          .text("View the ");
+        
+        svg.append("text")
+          .attr("x", 75)
+          .attr("y", -15)
+          .style("font-size","1em")
+          .text("data source")
+          .style("fill", "rgb(123,174,174")
+          .style("cursor", "pointer")
+          .style("text-decoration", "underline")
+          .on("click", function() { window.open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5074457/"); })
+        ; 
+        svg.append("text")
+          .attr("x", 175)
+          .attr("y", -15)
+          .style("fill", "grey")
+          .style("font-size", "1em")
+          .text("or download the ");
+        
+        if ( data == "MD_PD.json"){
+        svg.append("text")
+          .attr("x", 310)
+          .attr("y", -15)
+          .style("font-size","1em")
+          .text("dataset")
+          .style("fill", "rgb(123,174,174")
+          .style("cursor", "pointer")
+          .style("text-decoration", "underline")
+          .on("click", function (d) {window.open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5074457/bin/pone.0165196.s003.xls");})
+        }
+        else {
+        svg.append("text")
+          .attr("x", 310)
+          .attr("y", -15)
+          .style("font-size","1em")
+          .text("dataset")
+          .style("fill", "rgb(123,174,174")
+          .style("cursor", "pointer")
+          .style("text-decoration", "underline")
+          .on("click", function (){ window.open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5074457/bin/pone.0165196.s004.xls");});
+        } 
+
+      //tell sankey where the nodes and links are in the dataset 
+      //define layout (calls all the functions of the plugin)
+      sankey
+        .nodes(graph.nodes)
+        .links(graph.links)
+        .layout(1);
+
+
+      // add in the links
+      var link = svg.selectAll(".node")
+        .data(graph.links)
+        .enter().append("path")
+        .attr("class", function (d) {
+          if (data == "MD_PD.json") { return "link_b" }
+          else if (data = "PD_MD.json") { return "link_g" }
+        })
+        .attr("d", path)
+        .style("stroke-width", function (d) { return Math.max(1, d.dy); })
+        .sort(function (a, b) { return b.dy - a.dy; })
+
+
+      // add the tooltip
+      var tooltip = link.append("title")
+        .text(function (d) {
+          return d.source.name + " → " + d.target.name + "\n" + "Hazard Ratio: " + d.value;
+        })
+        .attr("class", "title")
+      ;
+
+      // add in the nodes
+      var node = svg.selectAll(".node")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function (d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        })
+
+      // add the rectangles for the nodes
+      var rect = node.append("rect")
+        .attr("height", function (d) { return -(-d.dy); })
+        .attr("width", sankey.nodeWidth())
+        .attr("class", "rect")
+        .style("fill", function (d) {
+          if (data == "MD_PD.json") {
+            if (d.node < 6) { return myColour_b(d.value) }
+            else if (d.node > 5) { return myColour_g(d.value) }
+          }
+          else if (data == "PD_MD.json") {
+            if (d.node > 8) { return myColour_b(d.value) }
+            else if (d.node < 9) { return myColour_g(d.value) }
+          }
+        })
+
+        .style("stroke", function (d) {
+          return "black";
+        })
+        .append("title");
+
+      // add in the title for the nodes
+      var node_title = node.append("text")
+        .attr("class", "text")
+        .style("font-weight", "bold")
+        .style("font-size", "1.2em")
+        .attr("x", -6)
+        .attr("y", function (d) { return d.dy / 2; })
+        .attr("dy", ".35em")
+        .attr("text-anchor", "end")
+        //.attr("transform", null)
+        .text(function (d) { return d.name; })
+        .filter(function (d) { return d.x < width / 2; })
+        .attr("x", 6 + sankey.nodeWidth())
+        .attr("text-anchor", "start");
+    });
+  }
+
+
+</script>
+<footer class="footer" id="footer">
+  <nav id= "page-nav2">
+    <ul>
+      <li class="nav-item">
+        <a href="heatmap.html">
+          Comorbidity between Mental Disorders
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href= "sankey.html">
+          Comorbidity of Mental and Physical Diseases
+        </a>
+      </li>
+    </ul>
+    <div id="logo_footer">
+      <a href="index.html">
+      Coursework II
+      </a>
+    </div>
+  </nav>
+</footer>
